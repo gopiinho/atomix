@@ -1,6 +1,6 @@
-# Atomics
+# Atomix
 
-**Atomics** is a minimal smart contract library focused on providing the _bare minimum_ implementations of popular Ethereum standards.  
+**Atomix** is a minimal smart contract library focused on providing the _bare minimum_ implementations of popular Ethereum standards.  
 No extra features, no unnecessary complexity — just the pure essentials.
 
 ## 📦 Contracts
@@ -12,16 +12,16 @@ _(More coming soon.)_
 
 ## 🚀 Installation
 
-To install with [**Foundry**](https://github.com/gakonst/foundry):
+To install with [**Foundry**](https://github.com/foundry-rs/foundry):
 
 ```bash
-forge install gopiinho/atomics
+forge install gopiinho/atomix
 ```
 
 or clone manually:
 
 ```bash
-git clone https://github.com/gopiinho/atomics.git
+git clone https://github.com/gopiinho/atomix.git
 ```
 
 ## 📜 License
