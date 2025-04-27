@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.29;
+pragma solidity ^0.8.20;
 
 abstract contract Ownable {
     /*////////////////////////////////
@@ -8,19 +8,32 @@ abstract contract Ownable {
     error Ownable__NotOwner(address user);
 
     /*////////////////////////////////
+                Events
+    ////////////////////////////////*/
+    event OwnershipTransferred(address indexed oldOwner, address indexed newOwner);
+
+    /*////////////////////////////////
                Storage
     ////////////////////////////////*/
     address public owner;
 
-    /*////////////////////////////////
-               Functions
-    ////////////////////////////////*/
     modifier onlyOwner() {
         require(msg.sender == owner, Ownable__NotOwner(msg.sender));
         _;
     }
+    /*////////////////////////////////
+               Functions
+    ////////////////////////////////*/
 
     constructor() {
         owner = msg.sender;
+
+        emit OwnershipTransferred(address(0), msg.sender);
+    }
+
+    function transferOwnership(address _newOwner) public virtual onlyOwner {
+        owner = _newOwner;
+
+        emit OwnershipTransferred(msg.sender, _newOwner);
     }
 }

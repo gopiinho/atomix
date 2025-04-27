@@ -5,8 +5,10 @@ No extra features, no unnecessary complexity — just the pure essentials.
 
 ## 📦 Contracts
 
-- `Ownable.sol` — A minimal Ownable contract for secure authentication.
-- `ERC20.sol` — A minimal ERC20 token implementation.
+```ml
+auth
+├─ Ownable — "A minimal Ownable contract for secure authentication.
+```
 
 _(More coming soon.)_
 
