@@ -31,9 +31,9 @@ abstract contract Ownable {
         emit OwnershipTransferred(address(0), msg.sender);
     }
 
-    function transferOwnership(address _newOwner) public virtual onlyOwner {
-        owner = _newOwner;
+    function transferOwnership(address newOwner) public virtual onlyOwner {
+        owner = newOwner;
 
-        emit OwnershipTransferred(msg.sender, _newOwner);
+        emit OwnershipTransferred(msg.sender, newOwner);
     }
 }
