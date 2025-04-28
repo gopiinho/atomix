@@ -1,6 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+/**
+ * @notice  Minimal ERC20 implementation complient with ERC-20 Token Standard.
+ * @author  Atomix (https://github.com/gopiinho/atomix/blob/main/src/tokens/ERC20.sol)
+ * @title   ERC20
+ * @dev     If Overriding, do not violate the ERC20 invariants.
+ *          Sum of all user balances must not exceed the totalSupply.
+ */
 abstract contract ERC20 {
     /*////////////////////////////////
                 Errors
@@ -14,7 +21,7 @@ abstract contract ERC20 {
     event Transfer(address indexed from, address indexed to, uint256 indexed amount);
 
     /*////////////////////////////////
-               Storage
+                Storage
     ////////////////////////////////*/
     string public name;
     string public symbol;
@@ -26,7 +33,7 @@ abstract contract ERC20 {
     mapping(address => mapping(address => uint256)) public allowance;
 
     /*////////////////////////////////
-               Functions
+                Functions
     ////////////////////////////////*/
     constructor(string memory _name, string memory _symbol, uint8 _decimals) {
         name = _name;
@@ -78,7 +85,7 @@ abstract contract ERC20 {
     /*////////////////////////////////
             Internal Functions
     ////////////////////////////////*/
-    function mint(address to, uint256 amount) internal virtual {
+    function _mint(address to, uint256 amount) internal virtual {
         totalSupply += amount;
 
         unchecked {

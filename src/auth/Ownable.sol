@@ -1,6 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+/**
+ * @notice  Ownable contract with single owner authorization.
+ * @author  Atomix (https://github.com/gopiinho/atomix/blob/main/src/auth/Ownable.sol)
+ * @title   Ownable
+ */
 abstract contract Ownable {
     /*////////////////////////////////
                 Errors
@@ -13,7 +18,7 @@ abstract contract Ownable {
     event OwnershipTransferred(address indexed oldOwner, address indexed newOwner);
 
     /*////////////////////////////////
-               Storage
+                Storage
     ////////////////////////////////*/
     address public owner;
 
@@ -22,7 +27,7 @@ abstract contract Ownable {
         _;
     }
     /*////////////////////////////////
-               Functions
+                Functions
     ////////////////////////////////*/
 
     constructor() {
