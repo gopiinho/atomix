@@ -7,7 +7,8 @@ No extra features, no unnecessary complexity — just the pure essentials.
 
 ```ml
 auth
-├─ Ownable — "A minimal Ownable contract for secure authentication.
+├─ Ownable — "Ownable contract with single owner authorization."
+├─ ERC20 - "Minimal ERC20 implementation compliant with ERC-20 Token Standard."
 ```
 
 _(More coming soon.)_

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 /**
- * @notice  Minimal ERC20 implementation complient with ERC-20 Token Standard.
+ * @notice  Minimal ERC20 implementation compliant with ERC-20 Token Standard.
  * @author  Atomix (https://github.com/gopiinho/atomix/blob/main/src/tokens/ERC20.sol)
  * @title   ERC20
  * @dev     If Overriding, do not violate the ERC20 invariants.
