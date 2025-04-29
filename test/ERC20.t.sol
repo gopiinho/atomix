@@ -2,6 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "forge-std/Test.sol";
+import {ERC20} from "../src/tokens/ERC20.sol";
 import {MockERC20} from "./mocks/MockERC20.sol";
 
 contract ERC20Test is Test {
@@ -66,5 +67,19 @@ contract ERC20Test is Test {
         vm.stopPrank();
 
         assertEq(amountToTransfer, mockErc20.balanceOf(address(this)));
+    }
+
+    function testRevertsIfUsingTransferFromWithoutApproval() public mintsTokens {
+        uint256 amountToTransfer = 50e18;
+        uint256 currentAllowance = mockErc20.allowance(user, receiver);
+
+        vm.startPrank(receiver);
+        vm.expectRevert(
+            abi.encodeWithSelector(
+                ERC20.ERC20__InsufficientAllowance.selector, user, currentAllowance, amountToTransfer
+            )
+        );
+        mockErc20.transferFrom(user, address(this), amountToTransfer);
+        vm.stopPrank();
     }
 }
