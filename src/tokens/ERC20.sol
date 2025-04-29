@@ -12,7 +12,7 @@ abstract contract ERC20 {
     /*////////////////////////////////
                 Errors
     ////////////////////////////////*/
-    error ERC20InsufficientAllowance(address spender, uint256 allowedAmount, uint256 amount);
+    error ERC20__InsufficientAllowance(address spender, uint256 allowedAmount, uint256 amount);
 
     /*////////////////////////////////
                 Events
@@ -65,7 +65,7 @@ abstract contract ERC20 {
 
         if (allowedAmount < type(uint256).max) {
             if (allowedAmount < amount) {
-                revert ERC20InsufficientAllowance(from, allowedAmount, amount);
+                revert ERC20__InsufficientAllowance(from, allowedAmount, amount);
             }
             unchecked {
                 allowance[from][msg.sender] = allowedAmount - amount;
