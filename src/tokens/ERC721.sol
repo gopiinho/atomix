@@ -48,6 +48,15 @@ abstract contract ERC721 {
         symbol = _symbol;
     }
 
+    /**
+     * @dev     0x01ffc9a7 ERC165 Interface ID for ERC165
+     *          0x80ac58cd ERC165 Interface ID for ERC721
+     *          0x5b5e139f ERC165 Interface ID for ERC721Metadata
+     */
+    function supportsInterface(bytes4 interfaceId) public view virtual returns (bool) {
+        return interfaceId == 0x01ffc9a7 || interfaceId == 0x80ac58cd || interfaceId == 0x5b5e139f;
+    }
+
     function approve(address spender, uint256 tokenId) public virtual {
         address owner = ownerOf[tokenId];
 
