@@ -1,4 +1,4 @@
-# Atomix
+# <img src="logo.png" alt="atomix" height="150"/>
 
 **Atomix** is a minimal smart contract library focused on providing the _bare minimum_ implementations of popular Ethereum standards.  
 No extra features, no unnecessary complexity — just the pure essentials.
