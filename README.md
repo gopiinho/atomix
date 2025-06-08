@@ -11,6 +11,7 @@ auth
 tokens
 ├─ ERC20 - "Minimal ERC20 implementation compliant with ERC-20 Token Standard."
 ├─ ERC721 - "Minimal ERC721 implementation compliant with Non-Fungible Token Standard."
+├─ WETH - "Minimal WETH implementation."
 ```
 
 _(More coming soon.)_
