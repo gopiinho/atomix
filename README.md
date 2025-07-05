@@ -12,6 +12,9 @@ tokens
 ├─ ERC20 - "Minimal ERC20 implementation compliant with ERC-20 Token Standard."
 ├─ ERC721 - "Minimal ERC721 implementation compliant with Non-Fungible Token Standard."
 ├─ WETH - "Minimal WETH implementation."
+utils
+├─ Pausable - "Contract that has capabilities to pause functions during emergencies."
+├─ ReenterancyGuard - "Contract to prevent funtions being reentered before its execution finishes."
 ```
 
 _(More coming soon.)_
