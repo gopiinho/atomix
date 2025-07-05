@@ -3,7 +3,7 @@ pragma solidity ^0.8.20;
 
 /**
  * @notice  Pausable contract that has capabilities to pause functions during emergencies.
- * @author  Atomix (https://github.com/gopiinho/atomix/blob/main/src/auth/Pausable.sol)
+ * @author  Atomix (https://github.com/gopiinho/atomix/blob/main/src/utils/Pausable.sol)
  * @dev     Its recommended to guard this contract functions using ownable contract.
  * @title   Ownable
  */
